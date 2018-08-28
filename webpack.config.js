@@ -7,11 +7,11 @@ module.exports = {
     app: "./src/index.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, "../dist/")
+    contentBase: path.join(__dirname, "../docs/")
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "docs")
   },
   module: {
     rules: [
@@ -68,6 +68,6 @@ module.exports = {
       chunks: ["app"],
       filename: "index.html"
     }),
-    new CleanWebpackPlugin(["dist"])
+    new CleanWebpackPlugin(["docs"])
   ]
 };
