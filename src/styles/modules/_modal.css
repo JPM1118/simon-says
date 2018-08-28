@@ -1,0 +1,49 @@
+.modal {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  transform: scale(1.2);
+  transition: all 0.3s ease-out;
+
+  &--is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  &__content {
+    background-color: white;
+    margin: 10% auto;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    width: 75vmin;
+    height: auto;
+    min-height: 20vmin;
+    line-height: 2;
+  }
+
+  &__close-btn {
+    color: grey;
+    float: right;
+    padding-right: 2vmin;
+    font-size: 30px;
+    &:hover {
+      cursor: pointer;
+      color: black;
+    }
+    &:active {
+      cursor: pointer;
+      color: black;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
